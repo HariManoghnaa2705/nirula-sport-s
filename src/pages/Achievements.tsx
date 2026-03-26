@@ -101,9 +101,9 @@ export default function Achievements() {
       />
       <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
-          <h4 className="font-mono text-purple-700/40 text-xs tracking-[0.3em] uppercase mb-2">Hall of Fame</h4>
-          <h1 className="text-6xl md:text-8xl font-display uppercase tracking-tighter text-purple-900">OUR <span className="text-purple-800 italic font-serif lowercase tracking-normal font-light">achievements</span></h1>
-          <p className="mt-6 text-purple-700/70 font-serif italic text-lg max-w-2xl leading-relaxed">
+          <h4 className="font-mono text-brown/40 text-xs tracking-[0.3em] uppercase mb-2">Hall of Fame</h4>
+          <h1 className="text-6xl md:text-8xl font-display uppercase tracking-tighter text-brown">OUR <span className="text-brown italic font-serif lowercase tracking-normal font-light">achievements</span></h1>
+          <p className="mt-6 text-brown/70 font-serif italic text-lg max-w-2xl leading-relaxed">
             Celebrating the spirit of excellence and the relentless pursuit of victory. From national championships to state-of-the-art facilities, explore the milestones that define Vignan's Nirula Sports Academy.
           </p>
         </div>
@@ -138,7 +138,7 @@ export default function Achievements() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                   <Link 
                     to={`/gallery/${item.id}`}
-                    className="bg-white text-purple-900 px-6 py-3 rounded-full font-mono text-xs uppercase tracking-widest hover:bg-purple-900 hover:text-white transition-colors"
+                    className="bg-white text-brown px-6 py-3 rounded-full font-mono text-xs uppercase tracking-widest hover:bg-brown hover:text-white transition-colors"
                   >
                     View Gallery
                   </Link>
@@ -154,28 +154,28 @@ export default function Achievements() {
                     return <IconComponent className={item.color} size={24} />;
                   })()}
                 </div>
-                <div className="font-mono text-[10px] tracking-widest text-purple-700/40 uppercase">{item.sport}</div>
+                <div className="font-mono text-[10px] tracking-widest text-brown/40 uppercase">{item.sport}</div>
               </div>
               
-              <h3 className="text-3xl mb-4 font-display uppercase tracking-tight group-hover:text-purple-900 transition-colors text-purple-900">{item.title}</h3>
-              <p className="text-purple-700/70 text-sm leading-relaxed mb-8">
+              <h3 className="text-3xl mb-4 font-display uppercase tracking-tight group-hover:text-brown transition-colors text-brown">{item.title}</h3>
+              <p className="text-brown/70 text-sm leading-relaxed mb-8">
                 {item.desc}
               </p>
 
               <div className="pt-8 border-t border-neutral-100 flex items-center justify-between">
                 <div className="flex gap-1">
                   {[1, 2, 3, 4, 5].map(star => (
-                    <Star key={star} size={12} className="fill-purple-700 text-purple-700" />
+                    <Star key={star} size={12} className="fill-brown text-brown" />
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <button className="text-[10px] font-mono uppercase tracking-widest text-purple-900 hover:underline transition-colors">
+                  <button className="text-[10px] font-mono uppercase tracking-widest text-brown hover:underline transition-colors">
                     Certificate
                   </button>
                   {item.image && (
                     <Link 
                       to={`/gallery/${item.id}`}
-                      className="text-[10px] font-mono uppercase tracking-widest text-purple-700/40 hover:text-purple-900 transition-colors"
+                      className="text-[10px] font-mono uppercase tracking-widest text-brown/40 hover:text-brown transition-colors"
                     >
                       Gallery
                     </Link>

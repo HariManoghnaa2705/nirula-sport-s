@@ -47,11 +47,11 @@ export default function Home() {
                   transition={{ duration: 0.8 }}
                   className="relative flex flex-col items-center"
                 >
-                  <h4 className="font-heading text-base md:text-lg tracking-[0.4em] uppercase mb-4 text-purple-900/40 font-medium">
+                  <h4 className="font-heading text-base md:text-lg tracking-[0.4em] uppercase mb-4 text-white font-medium">
                     WELCOME TO
                   </h4>
-                  <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-display uppercase text-purple-900">
-                    <span className="text-red-600">VIGNAN'S</span> <br />
+                  <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-display uppercase text-purple-900 flex flex-wrap justify-center gap-x-4">
+                    <span className="text-red-600">VIGNAN'S</span>
                     <span className="text-blue-600">NIRULA SPORTS</span>
                   </h1>
                   <div className="h-px w-32 mx-auto bg-purple-900/20 mb-10" />

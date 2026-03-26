@@ -42,17 +42,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
             </Link>
 
-            {/* Desktop Nav */}
+            {/* Desktop & Mobile Nav */}
             <div className={cn(
-              "hidden md:flex items-center border rounded-2xl p-1.5 space-x-1 transition-colors duration-500",
-              isHomePage ? "bg-neutral-100 border-neutral-200" : "bg-neutral-100 border-neutral-200"
+              "flex items-center border rounded-2xl p-1.5 space-x-1 transition-colors duration-500 bg-neutral-100 border-neutral-200 overflow-x-auto no-scrollbar",
             )}>
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    "px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-xl",
+                    "px-3 md:px-6 py-2 md:py-2.5 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-xl whitespace-nowrap",
                     location.pathname === item.path 
                       ? "bg-purple-900 text-white shadow-lg"
                       : "text-neutral-500 hover:text-purple-900 hover:bg-neutral-200"
@@ -62,44 +61,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               ))}
             </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className={cn("p-2 transition-colors", isHomePage ? "text-purple-900" : "text-purple-900")}>
-                {isOpen ? <X /> : <Menu />}
-              </button>
-            </div>
           </div>
         </div>
-
-        {/* Mobile Nav */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={cn(
-              "md:hidden border-t py-4 px-4 space-y-2 shadow-xl",
-              isHomePage ? "bg-white border-neutral-200" : "bg-white border-neutral-200"
-            )}
-          >
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "flex items-center space-x-4 p-3 rounded-lg transition-colors",
-                  location.pathname === item.path 
-                    ? "bg-purple-900 text-white"
-                    : "text-neutral-600 hover:bg-neutral-100"
-                )}
-              >
-                <item.icon size={20} />
-                <span className="font-medium uppercase tracking-widest text-xs">{item.name}</span>
-              </Link>
-            ))}
-          </motion.div>
-        )}
       </nav>
 
       <main className="relative z-10">
